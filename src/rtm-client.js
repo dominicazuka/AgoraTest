@@ -1,6 +1,7 @@
 import AgoraRTM from 'agora-rtm-sdk'
 import EventEmitter from 'events'
 
+const appId = process.env.REACT_APP_AGORA_APP_ID
 export default class RTMClient extends EventEmitter {
   constructor () {
     super()

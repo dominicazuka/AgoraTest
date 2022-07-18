@@ -1,27 +1,7 @@
 import React from "react";
 import RtmClient from "../rtm-client"
 
-const chat = () => {
-  //   //send messages
-  // sendbtn.addEventListener("click", ()=>{
-  //   channel.sendMessage({ text: msg.value }).then(() => {
-  //     /* Your code for handling events, such as a channel message-send success. */
-  //     chatbox.innerHTML += "<div class='message_holder'><span class='chat user1'>"+ msg.value + "</span></div>";
-  //     console.log("Successfully sent message!");
-  //   }).catch(error => {
-  //     /* Your code for handling events, such as a channel message-send failure. */
-  //     console.log("Error sending message!");
-  //     });
-  // })
-
-  // if(flag == true){
-  // //receive channel messages
-  // channel.on('ChannelMessage', ({ text }, senderId) => { // text: text of the received channel message; senderId: user ID of the sender.
-  //   /* Your code for handling events, such as receiving a channel message. */
-  //   chatbox.innerHTML +="<div class='message_holder'><span class='chat user2'>"+ text + "</span></div>";
-  //   msg.value="";
-  // });
-  // }
+const Chat = () => {
 
   let appId = process.env.REACT_APP_AGORA_APP_ID
   let uid = String(Math.floor(Math.random()*232))
@@ -67,4 +47,4 @@ const chat = () => {
   );
 };
 
-export default chat;
+export default Chat;
