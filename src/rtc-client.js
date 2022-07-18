@@ -28,7 +28,7 @@ export default class RTCClient {
 
         const config = {
             mode: data?.mode ? data.mode : 'live',
-            codec: data?.codec ? data.codec : 'h264'//vp8
+            codec: data?.codec ? data.codec : 'vp8'//vp8
         }
         console.debug('createClient() mode: ' + config.mode + ' codec: ' + config.codec)
         this._client = AgoraRTC.createClient(config)
@@ -196,7 +196,7 @@ export default class RTCClient {
             this._uid = 0
             console.debug('join appID: ' + appID + ',channel: ' + channel)
 
-            this._client.join(appID, channel, token || process.env.REACT_APP_AGORA_APP_TOKEN).then(uid => {
+            this._client.join(appID, channel, token || null).then(uid => {
                 console.debug(
                     'join success, channel: ' + channel + ', uid: ' + uid
                 )
